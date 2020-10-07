@@ -1,0 +1,23 @@
+{
+  "name": "estudo-git",
+  "version": "1.0.0",
+  "description": "Repositório para estudo",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielSantosLima/estudo-git.git"
+  },
+  "keywords": [
+    "Git"
+  ],
+  "author": "Gabriel Lima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielSantosLima/estudo-git/issues"
+  },
+  "homepage": "https://github.com/gabrielSantosLima/estudo-git#readme"
+}
