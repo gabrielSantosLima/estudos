@@ -1,3 +1,13 @@
-const fs = require('fs')
+const express = require('express')
 
-console.log('olá')
+const app = express()
+
+app.get('/', (req, resp)=> {
+    return resp.json({
+        hello: 'world',
+        timestamp: new Date().toUTCString()
+    })
+})
+
+app.use(express.json())
+app.listen(3000)
