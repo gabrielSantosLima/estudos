@@ -7,16 +7,15 @@ const routes = require('./routes')
 
 const app = express()
 
-mongoose.connect('mongodb://localhost:27017/upload',
-    { 
-        useNewUrlParser: true, 
-        useUnifiedTopology: true,
-        auth: {
-            password: 'root',
-            user: 'root'
-        }
-    }
-)
+mongoose.connect('mongodb://localhost:27017/upload', { 
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+
+const db = mongoose.connection
+
+db.on('error', () => { console.log('Falha na conexão!') })
+db.once('open', () => { console.log('Conectado!') })
 
 app.use(cors())
 app.use(express.json())

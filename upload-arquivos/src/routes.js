@@ -3,8 +3,10 @@ const multer = require('multer')
 
 const multerConfig = require('./config/multer')
 
-const ImageController = require('./controllers/ImageController')
+const PostsController = require('./controllers/PostsController')
 
-routes.post('/uploads', multer(multerConfig).single('file'), ImageController.post)
+routes.post('/uploads', multer(multerConfig).single('file'), PostsController.post)
+routes.get('/uploads', PostsController.get)
+routes.delete('/uploads', PostsController.deleteAll)
 
 module.exports = routes
