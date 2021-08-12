@@ -1,15 +1,15 @@
 package com.gabriel.celebration.domain.services;
 
 import com.gabriel.celebration.domain.entities.User;
-import com.gabriel.celebration.domain.ports.UserRepository;
+import com.gabriel.celebration.domain.ports.IUserRepository;
 
 import java.util.List;
 
 public class FetchAllUsers {
 
-    private UserRepository userRepository;
+    private IUserRepository userRepository;
 
-    public FetchAllUsers(UserRepository userRepository){
+    public FetchAllUsers(IUserRepository userRepository){
         this.userRepository = userRepository;
     }
 

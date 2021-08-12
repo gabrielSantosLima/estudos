@@ -5,4 +5,4 @@ stop:
 migrate:
 	gradle flywayMigrate -i
 cleanMigrate:
-	gradle flywayClean -i
+	gradle flywayClean

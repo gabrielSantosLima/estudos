@@ -1,13 +1,13 @@
 package com.gabriel.celebration.domain.services;
 
 import com.gabriel.celebration.domain.entities.User;
-import com.gabriel.celebration.domain.ports.UserRepository;
+import com.gabriel.celebration.domain.ports.IUserRepository;
 
 public class CreateUsers {
 
-    private UserRepository userRepository;
+    private IUserRepository userRepository;
 
-    public CreateUsers(UserRepository userRepository){
+    public CreateUsers(IUserRepository userRepository){
         this.userRepository = userRepository;
     }
 

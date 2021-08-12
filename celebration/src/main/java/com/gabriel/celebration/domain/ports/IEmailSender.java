@@ -2,6 +2,6 @@ package com.gabriel.celebration.domain.ports;
 
 import com.gabriel.celebration.domain.entities.Message;
 
-public interface EmailSender {
+public interface IEmailSender {
     boolean sendEmail(Message message);
 }

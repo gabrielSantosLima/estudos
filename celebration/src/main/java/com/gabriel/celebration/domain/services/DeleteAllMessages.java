@@ -1,12 +1,12 @@
 package com.gabriel.celebration.domain.services;
 
-import com.gabriel.celebration.domain.ports.MessageRepository;
+import com.gabriel.celebration.domain.ports.IMessageRepository;
 
 public class DeleteAllMessages {
 
-    private MessageRepository messageRepository;
+    private IMessageRepository messageRepository;
 
-    public DeleteAllMessages(MessageRepository messageRepository){
+    public DeleteAllMessages(IMessageRepository messageRepository){
         this.messageRepository = messageRepository;
     }
 

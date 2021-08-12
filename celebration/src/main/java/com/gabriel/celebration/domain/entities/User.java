@@ -1,19 +1,17 @@
 package com.gabriel.celebration.domain.entities;
 
-import com.gabriel.celebration.domain.valueobjects.Email;
-
 public class User {
     private int id;
     private String name;
-    private Email email;
+    private String email;
 
-    public User(int id, String name, Email email){
+    public User(int id, String name, String email){
         this.id = id;
         this.email = email;
         this.name = name;
     }
 
-    public Email getEmail() {
+    public String getEmail() {
         return email;
     }
 
@@ -23,5 +21,10 @@ public class User {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return getName();
     }
 }

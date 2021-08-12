@@ -1,14 +1,14 @@
 package com.gabriel.celebration.domain.services;
 
 import com.gabriel.celebration.domain.entities.Message;
-import com.gabriel.celebration.domain.ports.MessageRepository;
+import com.gabriel.celebration.domain.ports.IMessageRepository;
 
 import java.util.Optional;
 
 public class FindMessageById {
-    private MessageRepository messageRepository;
+    private IMessageRepository messageRepository;
 
-    public FindMessageById(MessageRepository messageRepository){
+    public FindMessageById(IMessageRepository messageRepository){
         this.messageRepository = messageRepository;
     }
 

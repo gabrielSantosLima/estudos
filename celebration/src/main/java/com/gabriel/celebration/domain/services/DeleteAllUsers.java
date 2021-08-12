@@ -1,11 +1,11 @@
 package com.gabriel.celebration.domain.services;
 
-import com.gabriel.celebration.domain.ports.UserRepository;
+import com.gabriel.celebration.domain.ports.IUserRepository;
 
 public class DeleteAllUsers {
-    private UserRepository userRepository;
+    private IUserRepository userRepository;
 
-    public DeleteAllUsers(UserRepository userRepository){
+    public DeleteAllUsers(IUserRepository userRepository){
         this.userRepository = userRepository;
     }
 

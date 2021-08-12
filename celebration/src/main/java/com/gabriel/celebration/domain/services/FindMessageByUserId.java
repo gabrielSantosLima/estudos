@@ -1,19 +1,19 @@
 package com.gabriel.celebration.domain.services;
 
 import com.gabriel.celebration.domain.entities.Message;
-import com.gabriel.celebration.domain.ports.MessageRepository;
+import com.gabriel.celebration.domain.ports.IMessageRepository;
 
 import java.util.List;
 
 public class FindMessageByUserId {
-    private MessageRepository messageRepository;
+    private IMessageRepository messageRepository;
 
-    public FindMessageByUserId(MessageRepository messageRepository){
+    public FindMessageByUserId(IMessageRepository messageRepository){
         this.messageRepository = messageRepository;
     }
 
-    public List<Message> execute(int id) throws Exception {
-        List<Message> messages = messageRepository.findByUserId(id);
+    public List<Message> execute(int userId) throws Exception {
+        List<Message> messages = messageRepository.findByUserId(userId);
         return messages;
     }
 }
