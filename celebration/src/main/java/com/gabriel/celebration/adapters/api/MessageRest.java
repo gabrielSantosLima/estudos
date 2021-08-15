@@ -1,6 +1,7 @@
 package com.gabriel.celebration.adapters.api;
 
 import com.gabriel.celebration.domain.entities.Message;
+import com.gabriel.celebration.domain.ports.IEmailSender;
 import com.gabriel.celebration.domain.ports.IMessageRepository;
 import com.gabriel.celebration.domain.ports.IUserRepository;
 import com.gabriel.celebration.domain.services.*;
@@ -20,9 +21,16 @@ public class MessageRest {
     @Autowired
     private IUserRepository userRepository;
 
+    @Autowired
+    private IEmailSender emailSender;
+
     @PostMapping
     public ResponseEntity<Message> create(@RequestBody Message message) throws Exception {
-        CreateMessages createMessages = new CreateMessages(messageRepository, userRepository);
+        CreateMessages createMessages = new CreateMessages(
+                messageRepository,
+                userRepository,
+                emailSender
+        );
         createMessages.execute(message);
         return ResponseEntity.status(204).build();
     }

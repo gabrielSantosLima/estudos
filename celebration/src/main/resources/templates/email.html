@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@1,300&display=swap" rel="stylesheet">
+    <style>
+        .main{
+            padding: 30px;
+            box-shadow: 0px 2px 10px 2px rgba(128,43,0, 0.8);
+            margin: 8px;
+            background-color: #FF5600;
+        }
+
+        *{
+            font-size: 12pt;
+            color: white;
+            font-family: 'Roboto','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .content{
+            padding: 8px;
+            border-radius: 2px;
+            font-style: italic;
+            word-break: break-all;
+            background-color: #B33C00;
+        }
+
+        p:last-child{
+            margin-top: 50px;
+        }
+
+
+        h1{
+            text-align: center;
+            font-size: 18pt;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Você recebeu uma mensagem personalizada de seu amigo!</h1>
+        <p>A mensagem diz...</p>
+        <p th:text="${content}" class="content">
+            (Não foi possível carregar a mensagem.)
+        </p>
+        <p><i>Celebration | 2021</i>
+        </p>
+    </div>
+</body>
+</html>
